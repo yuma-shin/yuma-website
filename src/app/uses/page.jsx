@@ -25,85 +25,54 @@ function Tool({ title, href, children }) {
 
 export const metadata = {
   title: 'Uses',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  description: '使用しているソフトウェア・ガジェット',
 }
 
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="使用しているソフトウェア・ガジェット"
+      intro="僕が使用しているソフトウェア・ガジェットをご紹介します。"
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
+          <Tool title="Custom PC (Core i7 11900k, RTX 3080, 32GB RAM)">
+            第11世代Core i7とRTX 3080をベースとした自作PCをプライベートの開発用で使用しています。<br />
+            開発用とは名ばかりでゲームばかりしていますが...w
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
+          <Tool title="13” MacBook Air, M2, 8GB RAM (2022)">
+            サブPCとしてM2 Mac Book Airを使用しています。軽い開発やネットサーフィンに使用しています。<br />
+            初めてのMacで最近購入しました。WindowsとMacは両方使いこなせるようになりたいですね。
           </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
+          <Tool title="BenQ MOBIUZ EX2510S">
+            会社支給のノートPCや自作PCの映像出力先として24インチのゲーミングモニターを2台使用しています。<br />
+            元々同じBenQさんのXL2411Pを使用していましたがEX2510Sの方が発色がとても良く気に入っています。
           </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
+          <Tool title="Keychron Q1 Max (JIS)">
+            今のところメインキーボードとして使用しています。Makuakeさんのクラウドファンディングで購入しました。<br />
+            軸はバナナ軸を選択しましたが"コトコト"ととても良い打鍵感で気に入っています。<br />
+            ちなみにQシリーズではQ1, Q1 Proも持っていますw
           </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+          <Tool title="Logicool MX Master 3">
+            今のところメインのマウスとして使用しています。横スクロール用のホイールが付いているのが便利ですね。<br />
+            ちなみにMXシリーズではMX Keys(キーボード), MX Master 2s, MX Master 3sを持っています。<br />
+            MX Master 3sはクリック音が静音で時々使い分けています。
+          </Tool>
+          <Tool title="Logicool ERGO M575">
+            会社支給のPC(事務用)で使用しています。トラックボールマウスに興味がありお試して購入しました。<br />
+            はじめは違和感がありますが、慣れると手首が疲れにくくとても使いやすいです。
+          </Tool>
+          <Tool title="Logicool G703">
+            ゲームで使用しています。手にフィットしやすくマウスの重量もオモリで変えられるのが特徴です。
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
+          <Tool title="Visual Studio Code">
+            アプリケーション開発用のエディタとして使用しています。拡張機能で自分好みにカスタマイズでき重宝しています。<br />
+            Github Copilot使ってみたい...
           </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
-          </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+          <Tool title="Terminal">
+            コマンド実行はWindowsに標準搭載されているターミナルをOh My Poshでカスタマイズして使用しています。
           </Tool>
         </ToolsSection>
       </div>
