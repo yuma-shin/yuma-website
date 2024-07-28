@@ -40,7 +40,7 @@ export default function Uses() {
             第11世代Core i7とRTX 3080をベースとした自作PCをプライベートの開発用で使用しています。<br />
             開発用とは名ばかりでゲームばかりしていますが...w
           </Tool>
-          <Tool title="13” MacBook Air, M2, 8GB RAM (2022)">
+          <Tool title="13&apos; MacBook Air, M2, 8GB RAM (2022)">
             サブPCとしてM2 Mac Book Airを使用しています。軽い開発やネットサーフィンに使用しています。<br />
             初めてのMacで最近購入しました。WindowsとMacは両方使いこなせるようになりたいですね。
           </Tool>
@@ -50,7 +50,7 @@ export default function Uses() {
           </Tool>
           <Tool title="Keychron Q1 Max (JIS)">
             今のところメインキーボードとして使用しています。Makuakeさんのクラウドファンディングで購入しました。<br />
-            軸はバナナ軸を選択しましたが"コトコト"ととても良い打鍵感で気に入っています。<br />
+            軸はバナナ軸を選択しましたが「コトコト」ととても良い打鍵感で気に入っています。<br />
             ちなみにQシリーズではQ1, Q1 Proも持っていますw
           </Tool>
           <Tool title="Logicool MX Master 3">
