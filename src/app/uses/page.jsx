@@ -59,7 +59,7 @@ export default function Uses() {
             MX Master 3sはクリック音が静音で時々使い分けています。
           </Tool>
           <Tool title="Logicool ERGO M575">
-            会社支給のPC(事務用)で使用しています。トラックボールマウスに興味がありお試して購入しました。<br />
+            会社支給のPC(事務用)で使用しています。トラックボールマウスに興味がありお試しで購入しました。<br />
             はじめは違和感がありますが、慣れると手首が疲れにくくとても使いやすいです。
           </Tool>
           <Tool title="Logicool G703">
