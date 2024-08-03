@@ -36,7 +36,7 @@ export default function Uses() {
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
-          <Tool title="Custom PC (Core i7 11900k, RTX 3080, 32GB RAM)">
+          <Tool title="Custom PC (Core i7 11700k, RTX 3080, 32GB RAM)">
             第11世代Core i7とRTX 3080をベースとした自作PCをプライベートの開発用で使用しています。<br />
             開発用とは名ばかりでゲームばかりしていますが...w
           </Tool>
