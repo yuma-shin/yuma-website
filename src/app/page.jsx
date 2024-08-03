@@ -72,16 +72,16 @@ function Role({ role }) {
 function Certification() {
   let certs = [
     {
-      cert: 'Cloud Essentials',
-      title: 'CompTIA',
-      logo: logoCloudEssentials,
-      year: '2019'
-    },
-    {
       cert: 'GENERAL 2024#2',
       title: 'JDLA Deep Learning',
       logo: logoGeneral,
       year: '2024'
+    },
+    {
+      cert: 'Cloud Essentials',
+      title: 'CompTIA',
+      logo: logoCloudEssentials,
+      year: '2019'
     }
   ]
 
@@ -107,13 +107,14 @@ function Music() {
         <IoIosMusicalNotes size={25} />
         <span className="ml-3">Favorite Music</span>
       </h2>
-      <div className='flex mt-6 space-y-6'>
+      <div className='flex mt-6 items-center'>
         <Link href='https://youtu.be/tGvZQ_vfosg'>
           <Image
             src='https://img.youtube.com/vi/tGvZQ_vfosg/mqdefault.jpg'
             alt='ErroЯ CODE | Who-ya Extended'
             width={200}
             height={600}
+            className='rounded-lg'
           />
         </Link>
         <div className='ml-5'>
@@ -127,7 +128,6 @@ function Music() {
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
@@ -159,11 +159,11 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
-            Yuma Shintani - Engineer of Voice Communication, Network and Generative AI
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
+            Yuma Shintani - Engineer of Voice Communication, Network, Cloud and Generative AI
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            社会人6年目のエンジニアです。某通信会社にて音声系サービスの検証業務と生成AI活用推進を担当しています。
+            社会人6年目のエンジニアです。某通信会社にて音声系サービスの検証業務と生成AI活用推進およびアプリケーション開発を担当しています。
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink 
@@ -203,10 +203,7 @@ export default async function Home() {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {
-            //<Newsletter />
             <Music />
-            }
             <Certification />
           </div>
         </div>

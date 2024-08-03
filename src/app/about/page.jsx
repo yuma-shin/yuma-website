@@ -60,7 +60,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <p className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">高専</p>
+              <h1 className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">高専</h1>
               <p className="mt-2">
                 高専時代は5年間、宇宙開発研究部に所属し気象観測機器の開発やBalloon Sat・Cube Satの開発をやっていました。
                 卒業研究ではバルーンサットの開発とCubeSat教材への改良の検討をやっていました。
@@ -71,7 +71,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <p className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">社会人</p>
+              <h1 className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">社会人</h1>
               <p className='mt-2'>
                 現在は某通信会社にて音声系サービスの検証業務を主に担当しています。統合系サービスのため使われている技術が音声・クラウド・サーバーなど幅広く、多様なスキルが身に付けられ、やりがいを感じています。
                 品質を担保する最後の砦として日々取り組んでいます。
@@ -81,7 +81,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <p className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">OFF TIME</p>
+              <h1 className="text-4xl tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">OFF TIME</h1>
               <p className='mt-2'>
                 PC関連のガジェット集め、ゲームをやっています。リモートワークで体を動かす機会が減ったので、毎日ウォーキングとリングフィットをやっています。
               </p>
