@@ -108,18 +108,18 @@ function Music() {
         <span className="ml-3">Favorite Music</span>
       </h2>
       <div className='flex mt-6 items-center'>
-        <Link href='https://youtu.be/tGvZQ_vfosg'>
+        <Link href='https://youtu.be/mKYpA1-5NNs?si=MEZ3tlWbJ3aKbklZ' target='_blank'>
           <Image
-            src='https://img.youtube.com/vi/tGvZQ_vfosg/mqdefault.jpg'
-            alt='ErroЯ CODE | Who-ya Extended'
+            src='https://img.youtube.com/vi/mKYpA1-5NNs/mqdefault.jpg'
+            alt='RED OUT | 米津玄師 Kenshi Yonezu'
             width={200}
             height={600}
             className='rounded-lg'
           />
         </Link>
         <div className='ml-5'>
-          <p className='text-2xl'>ErroЯ CODE</p>
-          <p>Who-ya Extended</p>
+          <p className='text-2xl'>RED OUT</p>
+          <p>米津玄師<br />Kenshi Yonezu</p>
         </div>
       </div>
     </div>
