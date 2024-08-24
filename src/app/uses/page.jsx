@@ -31,7 +31,7 @@ export const metadata = {
 export default function Uses() {
   return (
     <SimpleLayout
-      title="使用しているソフトウェア・ガジェット"
+      title="Uses"
       intro="僕が使用しているソフトウェア・ガジェットをご紹介します。"
     >
       <div className="space-y-20">
