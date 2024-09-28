@@ -108,18 +108,18 @@ function Music() {
         <span className="ml-3">Favorite Music</span>
       </h2>
       <div className='flex mt-6 items-center'>
-        <Link href='https://youtu.be/mKYpA1-5NNs?si=MEZ3tlWbJ3aKbklZ' target='_blank'>
+        <Link href='https://youtu.be/8tQiWHXSGN0?si=MEZ3tlWbJ3aKbklZ' target='_blank'>
           <Image
-            src='https://img.youtube.com/vi/mKYpA1-5NNs/mqdefault.jpg'
-            alt='RED OUT | 米津玄師 Kenshi Yonezu'
+            src='https://img.youtube.com/vi/8tQiWHXSGN0/mqdefault.jpg'
+            alt='ファタール / GEMN - Fatal / GEMN'
             width={200}
             height={600}
             className='rounded-lg'
           />
         </Link>
         <div className='ml-5'>
-          <p className='text-2xl'>RED OUT</p>
-          <p>米津玄師<br />Kenshi Yonezu</p>
+          <p className='text-2xl'>ファタール</p>
+          <p>GEMN<br />中島健人・キタニタツヤ</p>
         </div>
       </div>
     </div>
