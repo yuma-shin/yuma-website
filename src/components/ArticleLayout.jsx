@@ -7,6 +7,11 @@ import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
+import dynamic from "next/dynamic";
+
+const Giscus = dynamic(() => import("@/app/giscus").then((m) => m.Comment), {
+  ssr: false,
+});
 
 function ArrowLeftIcon(props) {
   return (
@@ -56,6 +61,7 @@ export function ArticleLayout({ article, children }) {
               {children}
             </Prose>
           </article>
+          <Giscus />
         </div>
       </div>
     </Container>
