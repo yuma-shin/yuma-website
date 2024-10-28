@@ -1,25 +1,14 @@
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { M_PLUS_Rounded_1c, Noto_Sans_JP, Sawarabi_Gothic } from "next/font/google"
+import { M_PLUS_Rounded_1c } from "next/font/google"
 
 import '@/styles/tailwind.css'
-//import '@/styles/page.css'
 
 const mplusrounded1c = M_PLUS_Rounded_1c({
   subsets: ["latin"],
   weight: ["300", "500", "700"],
 });
-
-const NatoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["300", "500", "700"],
-})
-
-const SawarabiGothic = Sawarabi_Gothic({
-  subsets: ["latin"],
-  weight: ["400"],
-})
 
 export const metadata = {
   title: {
