@@ -119,7 +119,7 @@ function Music() {
         </Link>
         <div className='ml-5'>
           <p className='text-2xl'>ファタール</p>
-          <p>GEMN<br />中島健人・キタニタツヤ</p>
+          <p className="text-xs">GEMN<br />中島健人・キタニタツヤ</p>
         </div>
       </div>
     </div>
