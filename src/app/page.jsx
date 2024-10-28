@@ -12,13 +12,13 @@ import {
 import { SiQiita } from 'react-icons/si'
 import { IoIosMusicalNotes } from "react-icons/io";
 import { PiCertificateLight } from "react-icons/pi";
-import logoCloudEssentials from '@/images/logos/cloud-essentials.jpeg'
-import logoGeneral from '@/images/logos/general2024.png'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import logoCloudEssentials from '@/images/logos/cloud-essentials.webp'
+import logoGeneral from '@/images/logos/general2024.webp'
+import image1 from '@/images/photos/image-1.webp'
+import image2 from '@/images/photos/image-2.webp'
+import image3 from '@/images/photos/image-3.webp'
+import image4 from '@/images/photos/image-4.webp'
+import image5 from '@/images/photos/image-5.webp'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 

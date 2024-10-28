@@ -9,7 +9,7 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import { SiQiita } from 'react-icons/si'
-import portraitImage from '@/images/avatar.jpg'
+import portraitImage from '@/images/avatar.webp'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
