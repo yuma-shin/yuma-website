@@ -1,0 +1,18 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Yuma Shintani',
+  date: '2024-10-25',
+  title: 'ブログページにコメント機能が付けられる「giscus」をNext.jsで使う',
+  description:
+    'お久しぶりです。私のブログにはコメントやリアクションを付けられる機能が無いので「giscus」を使ってコメント機能を実装してみました。',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## はじめに
