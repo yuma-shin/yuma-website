@@ -46,7 +46,7 @@ const projects = [
     description:
       'Ollama Modelsで利用可能なモデルの最新データセットをJSONフォーマットで提供します。毎日0時(UTC)にモデルリストがアップデートされます。',
     link: {
-      href: 'https://yuma-shintani.github.io/ollama-model-library',
+      href: 'https://github.com/yuma-shintani/ollama-model-library',
       label: 'github.com',
     },
     logo: Ollama,
