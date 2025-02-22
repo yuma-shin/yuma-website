@@ -1,5 +1,5 @@
 {
-  "name": "tailwindui-template",
+  "name": "yuma-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "license": "Tailwind UI License",
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@giscus/react": "^3.0.0",
