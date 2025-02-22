@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
 
+export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs' // Edge ではなく Node.js ランタイムを使用
 
 const metaDataRules = {

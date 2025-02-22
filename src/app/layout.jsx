@@ -11,6 +11,9 @@ const mplusrounded1c = M_PLUS_Rounded_1c({
 })
 
 export const metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  ),
   title: {
     template: '%s - Yuma Shintani',
     default: 'Yuma Shintani',
