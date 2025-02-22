@@ -78,14 +78,20 @@ module.exports = function typographyStyles({ theme }) {
         },
 
         // Headings
-        'h2, h3': {
+        'h1, h2, h3': {
           color: 'var(--tw-prose-headings)',
           fontWeight: theme('fontWeight.semibold'),
         },
-        h2: {
-          fontSize: theme('fontSize.xl')[0],
+        h1: {
+          fontSize: theme('fontSize.3xl')[0],
           lineHeight: theme('lineHeight.7'),
-          marginTop: theme('spacing.20'),
+          marginTop: theme('spacing.10'),
+          marginBottom: theme('spacing.4'),
+        },
+        h2: {
+          fontSize: theme('fontSize.2xl')[0],
+          lineHeight: theme('lineHeight.7'),
+          marginTop: theme('spacing.10'),
           marginBottom: theme('spacing.4'),
         },
         h3: {
@@ -166,11 +172,13 @@ module.exports = function typographyStyles({ theme }) {
         },
         'ul, ol': {
           paddingLeft: theme('spacing.6'),
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.2'),
         },
         li: {
-          marginTop: theme('spacing.6'),
-          marginBottom: theme('spacing.6'),
-          paddingLeft: theme('spacing[3.5]'),
+          marginTop: theme('spacing.1'),
+          marginBottom: theme('spacing.1'),
+          paddingLeft: theme('spacing[1]'),
         },
         'li::marker': {
           fontSize: theme('fontSize.sm')[0],
@@ -198,10 +206,12 @@ module.exports = function typographyStyles({ theme }) {
           fontWeight: theme('fontWeight.medium'),
           backgroundColor: 'var(--tw-prose-pre-bg)',
           borderRadius: theme('borderRadius.3xl'),
-          padding: theme('spacing.8'),
+          padding: theme('spacing.4'),
           overflowX: 'auto',
           border: '1px solid',
           borderColor: 'var(--tw-prose-pre-border)',
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.4'),
         },
         'pre code': {
           display: 'inline',
@@ -211,6 +221,8 @@ module.exports = function typographyStyles({ theme }) {
           backgroundColor: 'transparent',
           borderRadius: 0,
           padding: 0,
+          marginTop: theme('spacing.2'),
+          marginBottom: theme('spacing.4'),
         },
 
         // Horizontal rules
