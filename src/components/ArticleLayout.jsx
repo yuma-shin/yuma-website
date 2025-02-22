@@ -7,11 +7,11 @@ import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic'
 
-const Giscus = dynamic(() => import("@/app/giscus").then((m) => m.Comment), {
+const Giscus = dynamic(() => import('@/app/giscus').then((m) => m.Comment), {
   ssr: false,
-});
+})
 
 function ArrowLeftIcon(props) {
   return (
@@ -46,7 +46,7 @@ export function ArticleLayout({ article, children }) {
           )}
           <article>
             <header className="flex flex-col">
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              <h1 className="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-4xl dark:text-zinc-100">
                 {article.title}
               </h1>
               <time
@@ -61,7 +61,9 @@ export function ArticleLayout({ article, children }) {
               {children}
             </Prose>
           </article>
-          <Giscus />
+          <div className="mt-8">
+            <Giscus />
+          </div>
         </div>
       </div>
     </Container>
