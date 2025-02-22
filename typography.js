@@ -84,13 +84,13 @@ module.exports = function typographyStyles({ theme }) {
         },
         h1: {
           fontSize: theme('fontSize.3xl')[0],
-          lineHeight: theme('lineHeight.7'),
+          lineHeight: theme('lineHeight.10'),
           marginTop: theme('spacing.10'),
           marginBottom: theme('spacing.4'),
         },
         h2: {
           fontSize: theme('fontSize.2xl')[0],
-          lineHeight: theme('lineHeight.7'),
+          lineHeight: theme('lineHeight.8'),
           marginTop: theme('spacing.10'),
           marginBottom: theme('spacing.4'),
         },
