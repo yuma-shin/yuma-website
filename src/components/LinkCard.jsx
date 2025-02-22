@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-function LinkCard({ url }) {
+export function LinkCard({ url }) {
   const [metadata, setMetadata] = useState(null)
 
   useEffect(() => {
@@ -24,28 +24,45 @@ function LinkCard({ url }) {
   if (!metadata) return <p>Loading...</p>
 
   return (
-    <a
-      href={metadata.url}
-      className="max-w block rounded-2xl bg-white px-6 shadow-md transition-shadow duration-300 hover:shadow-lg"
-      target="_blank"
-    >
-      <div className="flex items-center space-x-4">
-        {metadata.image && (
-          <img
-            src={metadata.image}
-            alt={metadata.title}
-            className="h-16 w-16 rounded-lg object-cover"
-          />
-        )}
-        <div>
-          <p className="text-lg font-semibold text-gray-900">
-            {metadata.title}
-          </p>
-          <p className="text-sm text-gray-600">{metadata.description}</p>
+    <>
+      <a
+        href={metadata.url}
+        className="max-w not-prose mb-2 block rounded-xl border border-gray-100 bg-white transition-all duration-300 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+        target="_blank"
+      >
+        <div className="flex flex-col-reverse items-stretch md:flex-row md:space-x-4 md:space-y-0">
+          <div className="flex flex-1 flex-col justify-between px-4 py-3">
+            <div>
+              <p className="line-clamp-1 text-lg font-semibold text-gray-900 dark:text-white">
+                {metadata.title}
+              </p>
+              <p className="line-clamp-1 text-sm text-gray-600 dark:text-gray-400">
+                {metadata.description}
+              </p>
+            </div>
+            {metadata.icon && metadata.title && metadata.provider ? (
+              <div className="mt-2 flex items-center space-x-2">
+                <img
+                  src={metadata.icon}
+                  alt={metadata.title}
+                  width={14}
+                  height={14}
+                />
+                <p className="text-sm">{metadata.provider}</p>
+              </div>
+            ) : null}
+          </div>
+          {metadata.image && (
+            <div className="flex flex-shrink-0 items-stretch overflow-hidden md:w-48">
+              <img
+                src={metadata.image}
+                alt={metadata.title}
+                className="h-full w-full rounded-xl object-cover md:rounded-none md:rounded-r-xl"
+              />
+            </div>
+          )}
         </div>
-      </div>
-    </a>
+      </a>
+    </>
   )
 }
-
-export default LinkCard
