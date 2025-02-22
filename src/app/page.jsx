@@ -4,14 +4,10 @@ import clsx from 'clsx'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  XIcon,
-} from '@/components/SocialIcons'
+import { GitHubIcon, InstagramIcon, XIcon } from '@/components/SocialIcons'
 import { SiQiita } from 'react-icons/si'
-import { IoIosMusicalNotes } from "react-icons/io";
-import { PiCertificateLight } from "react-icons/pi";
+import { IoIosMusicalNotes } from 'react-icons/io'
+import { PiCertificateLight } from 'react-icons/pi'
 import logoCloudEssentials from '@/images/logos/cloud-essentials.webp'
 import logoGeneral from '@/images/logos/general2024.webp'
 import image1 from '@/images/photos/image-1.webp'
@@ -49,15 +45,20 @@ function Role({ role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-16 w-16 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-14 w-14 rounded-full" unoptimized />
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-14 w-14 rounded-full"
+          unoptimized
+        />
       </div>
-      <dl className="flex flex-auto flex-wrap gap-x-2 mt-3">
+      <dl className="mt-3 flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Certificate</dt>
-        <dd className="w-full flex-none text-md font-medium text-zinc-900 dark:text-zinc-100">
+        <dd className="text-md w-full flex-none font-medium text-zinc-900 dark:text-zinc-100">
           {role.cert}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400 mb-5">
+        <dd className="mb-5 text-xs text-zinc-500 dark:text-zinc-400">
           {role.title}
         </dd>
         <dt className="sr-only">Date</dt>
@@ -75,20 +76,20 @@ function Certification() {
       cert: 'GENERAL 2024#2',
       title: 'JDLA Deep Learning',
       logo: logoGeneral,
-      year: '2024'
+      year: '2024',
     },
     {
       cert: 'Cloud Essentials',
       title: 'CompTIA',
       logo: logoCloudEssentials,
-      year: '2019'
-    }
+      year: '2019',
+    },
   ]
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <PiCertificateLight size={25}/>
+        <PiCertificateLight size={25} />
         <span className="ml-3">Certification</span>
       </h2>
       <ol className="mt-6 space-y-4">
@@ -107,19 +108,26 @@ function Music() {
         <IoIosMusicalNotes size={25} />
         <span className="ml-3">Favorite Music</span>
       </h2>
-      <div className='flex mt-6 items-center'>
-        <Link href='https://youtu.be/8tQiWHXSGN0?si=MEZ3tlWbJ3aKbklZ' target='_blank'>
+      <div className="mt-6 flex items-center">
+        <Link
+          href="https://youtu.be/8tQiWHXSGN0?si=MEZ3tlWbJ3aKbklZ"
+          target="_blank"
+        >
           <Image
-            src='https://img.youtube.com/vi/8tQiWHXSGN0/mqdefault.jpg'
-            alt='ファタール / GEMN - Fatal / GEMN'
+            src="https://img.youtube.com/vi/8tQiWHXSGN0/mqdefault.jpg"
+            alt="ファタール / GEMN - Fatal / GEMN"
             width={200}
             height={600}
-            className='rounded-lg'
+            className="rounded-lg"
           />
         </Link>
-        <div className='ml-5'>
-          <p className='text-2xl'>ファタール</p>
-          <p className="text-xs">GEMN<br />中島健人・キタニタツヤ</p>
+        <div className="ml-5">
+          <p className="text-2xl">ファタール</p>
+          <p className="text-xs">
+            GEMN
+            <br />
+            中島健人・キタニタツヤ
+          </p>
         </div>
       </div>
     </div>
@@ -160,16 +168,17 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-3xl font-bold tracking-tight text-zinc-800 sm:text-3xl dark:text-zinc-100">
-            Yuma Shintani - Engineer of Voice Communication, Network, Cloud and Generative AI
+            Yuma Shintani - Engineer of Voice Communication, Network, Cloud and
+            Generative AI
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             社会人6年目のエンジニアです。某通信会社にて音声系サービスの検証業務と生成AI活用推進およびアプリケーション開発を担当しています。
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink 
-              href="https://twitter.com/TSUMTSUM_YUMA" 
-              aria-label="Follow on X" 
-              icon={XIcon} 
+            <SocialLink
+              href="https://twitter.com/TSUMTSUM_YUMA"
+              aria-label="Follow on X"
+              icon={XIcon}
             />
             <SocialLink
               href="https://www.instagram.com/yuma.shintani/"
@@ -198,9 +207,11 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+            {articles
+              .filter((article) => !article.draft) // draft が true のものを除外
+              .map((article) => (
+                <Article key={article.slug} article={article} />
+              ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Music />
