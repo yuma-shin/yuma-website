@@ -23,10 +23,10 @@ export function Footer() {
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/articles">Articles</NavLink>
+                <NavLink href="/work">Work</NavLink>
                 <NavLink href="/awards">Awards</NavLink>
                 <NavLink href="/skillset">SkilSet</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
-
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Yuma Shintani. All rights
