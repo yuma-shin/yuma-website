@@ -1,9 +1,9 @@
 import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
-import rlc from 'remark-link-card'
 import rehypeExternalLinks from 'rehype-external-links'
-import rehypeRaw from 'rehype-raw'
+import rehypeSlug from 'rehype-slug'
+import remarkToc from 'remark-toc'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -16,8 +16,12 @@ const nextConfig = {
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism, [rehypeExternalLinks, { target: '_blank' }]],
+    remarkPlugins: [remarkGfm, [remarkToc, { maxDepth: 1, heading: '目次' }]],
+    rehypePlugins: [
+      rehypePrism,
+      rehypeSlug,
+      [rehypeExternalLinks, { target: '_blank' }],
+    ],
   },
 })
 
