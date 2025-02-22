@@ -1,5 +1,6 @@
 import metadataScraper from 'metadata-scraper'
 
+export const runtime = 'nodejs'
 export async function GET(req) {
   const { searchParams } = new URL(req.url, process.env.NEXT_PUBLIC_BASE_URL)
   const url = searchParams.get('url')
