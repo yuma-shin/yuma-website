@@ -1,5 +1,7 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import NotFoundImage from '@/images/notfound.webp'
+import Image from 'next/image'
 
 export default function NotFound() {
   return (
@@ -12,10 +14,16 @@ export default function NotFound() {
           Page not found
         </h1>
         <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-          Sorry, we couldn’t find the page you’re looking for.
+          The page you're looking for was not found.
         </p>
+        <Image
+          src={NotFoundImage}
+          width={300}
+          style={{ borderRadius: '40% 60% 40% 50% / 60% 60% 50% 60%' }}
+          className="mt-4"
+        />
         <Button href="/" variant="secondary" className="mt-4">
-          Go back home
+          Return to home
         </Button>
       </div>
     </Container>
