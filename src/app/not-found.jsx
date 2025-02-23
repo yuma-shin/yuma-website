@@ -14,7 +14,7 @@ export default function NotFound() {
           Page not found
         </h1>
         <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-          The page you're looking for was not found.
+          The page you&apos;re looking for was not found.
         </p>
         <Image
           src={NotFoundImage}
