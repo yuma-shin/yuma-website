@@ -105,12 +105,12 @@ export default function Work() {
       </SimpleLayout>
       <SimpleLayout title="My Qiita" intro="Qiitaに執筆した記事を紹介します。">
         <h2 className="mb-4 text-2xl">ピックアップ記事</h2>
-        <div class="md:grid md:grid-cols-2 md:gap-4">
+        <div className="md:grid md:grid-cols-2 md:gap-4">
           <LinkCard url="https://qiita.com/y-shin/items/7f0922cb00c6e14280b9" />
           <LinkCard url="https://qiita.com/y-shin/items/de7678d7f118793ea3e0" />
         </div>
         <h2 className="my-4 text-2xl">最新記事</h2>
-        <div class="md:grid md:grid-cols-2 md:gap-4">
+        <div className="md:grid md:grid-cols-2 md:gap-4">
           <Qiita />
         </div>
       </SimpleLayout>
