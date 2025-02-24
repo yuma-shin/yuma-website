@@ -11,6 +11,7 @@ const nextConfig = {
   images: {
     domains: ['img.youtube.com'],
   },
+  reactStrictMode: false,
 }
 
 const withMDX = nextMDX({
