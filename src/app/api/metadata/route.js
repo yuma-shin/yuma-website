@@ -1,3 +1,4 @@
+import fetch from 'node-fetch'
 import * as cheerio from 'cheerio'
 
 export const dynamic = 'force-dynamic'
@@ -88,6 +89,69 @@ function extractMetaData($, rules, defaultValue = null) {
   return defaultValue
 }
 
+// robots.txtに準拠しているか確認する
+async function isAllowedByRobotsTxt(url, userAgent = 'MyCustomBot') {
+  try {
+    const robotsUrl = new URL('/robots.txt', url).href
+    //console.log(`Fetching: ${robotsUrl}`)
+
+    const response = await fetch(robotsUrl)
+    if (!response.ok) {
+      //console.log(`robots.txt を取得できなかった (${response.status}) : ${url}`)
+      return true
+    }
+
+    const text = await response.text()
+    //console.log(`robots.txt の内容:\n${text}`)
+
+    const lines = text.split('\n')
+    const disallowedPaths = []
+    const allowedPaths = []
+    let applicable = false
+
+    for (const line of lines) {
+      const trimmedLine = line.trim()
+
+      if (trimmedLine.startsWith('User-agent:')) {
+        applicable =
+          trimmedLine.split(':')[1].trim() === '*' ||
+          trimmedLine.includes(userAgent)
+      } else if (applicable && trimmedLine.startsWith('Disallow:')) {
+        const path = trimmedLine.split(':')[1].trim()
+        if (path) disallowedPaths.push(path.replace('*', '.*')) // 正規表現に対応
+      } else if (applicable && trimmedLine.startsWith('Allow:')) {
+        const path = trimmedLine.split(':')[1].trim()
+        if (path) allowedPaths.push(path.replace('*', '.*')) // 正規表現に対応
+      }
+    }
+
+    //console.log(`Disallow ルール: ${disallowedPaths}`)
+    //console.log(`Allow ルール: ${allowedPaths}`)
+
+    const parsedUrl = new URL(url)
+    const pathname = parsedUrl.pathname + parsedUrl.search // クエリパラメータを考慮
+    //console.log(`チェック対象パス: ${pathname}`)
+
+    // `Disallow` ルールの適用チェック
+    const isDisallowed = disallowedPaths.some((pattern) =>
+      new RegExp(`^${pattern}`).test(pathname),
+    )
+
+    // `Allow` ルールの適用チェック（`Disallow` より優先する場合）
+    const isAllowed = allowedPaths.some((pattern) =>
+      new RegExp(`^${pattern}`).test(pathname),
+    )
+
+    const isBlocked = isDisallowed && !isAllowed
+
+    //console.log(`robots.txt チェック結果 (${url}): ${isBlocked ? 'ブロック' : '許可'}`,)
+    return !isBlocked
+  } catch (error) {
+    console.warn('robots.txt チェックでエラー:', error)
+    return true
+  }
+}
+
 // 相対URLを絶対URLに変換する関数
 function makeAbsoluteUrl(baseUrl, relativeUrl) {
   if (!relativeUrl) return null
@@ -110,9 +174,21 @@ export async function GET(req) {
       })
     }
 
+    // robots.txtに準拠しているかの確認
+    const allowed = await isAllowedByRobotsTxt(url)
+    if (!allowed) {
+      return new Response(JSON.stringify({ error: 'Blocked by robots.txt' }), {
+        status: 403,
+        headers: { 'Content-Type': 'application/json' },
+      })
+    }
+
     // 外部サイトの HTML を取得
     const response = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0' }, // User-Agent を設定（403 回避）
+      headers: {
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
+      }, // User-Agent を設定（403 回避）
     })
     if (!response.ok) {
       throw new Error('Failed to fetch the page')
