@@ -1,11 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { LinkCard } from '@/components/LinkCard'
 
-import giscus01 from './img/01.png'
-import giscus02 from './img/02.png'
-import giscus03 from './img/03.png'
-import giscus04 from './img/04.png'
-
 export const article = {
   author: 'Yuma Shintani',
   date: '2024-10-25',
@@ -20,6 +15,11 @@ export const metadata = {
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
+
+import giscus01 from './img/01.png'
+import giscus02 from './img/02.png'
+import giscus03 from './img/03.png'
+import giscus04 from './img/04.png'
 
 お久しぶりです。私のブログにはコメントやリアクションを付けられる機能が無いので「giscus」を使ってコメント機能を実装してみました。
 
