@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { GitHubIcon, InstagramIcon, XIcon } from '@/components/SocialIcons'
+import { GitHubIcon } from '@/components/SocialIcons'
 import { SiQiita } from 'react-icons/si'
 import { IoIosMusicalNotes } from 'react-icons/io'
 import { PiCertificateLight } from 'react-icons/pi'
@@ -175,16 +175,6 @@ export default async function Home() {
             社会人6年目のエンジニアです。某通信会社にて音声系サービスの検証業務と生成AI活用推進およびアプリケーション開発を担当しています。
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/TSUMTSUM_YUMA"
-              aria-label="Follow on X"
-              icon={XIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/yuma.shintani/"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
             <SocialLink
               href="https://github.com/yuma-shin"
               aria-label="Github (Private)"

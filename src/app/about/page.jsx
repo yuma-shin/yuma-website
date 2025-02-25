@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import { GitHubIcon, InstagramIcon, XIcon } from '@/components/SocialIcons'
+import { GitHubIcon } from '@/components/SocialIcons'
 import { SiQiita } from 'react-icons/si'
 import portraitImage from '@/images/avatar.webp'
 
@@ -97,16 +97,6 @@ export default function About() {
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="https://twitter.com/TSUMTSUM_YUMA" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink
-              href="https://www.instagram.com/yuma.shintani/"
-              icon={InstagramIcon}
-              className="mt-4"
-            >
-              Follow on Instagram
-            </SocialLink>
             <SocialLink
               href="https://github.com/yuma-shin"
               icon={GitHubIcon}
