@@ -5,10 +5,10 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { LinkCard } from '@/components/LinkCard'
 import { Qiita } from '@/components/Qiita'
 
-import WebPexer from './img/webpexer.png'
-import Llamind from './img/llamind.png'
-import ChunkSize from './img/chunk.png'
-import Ollama from './img/ollama.png'
+import WebPexer from './img/webpexer.webp'
+import Llamind from './img/llamind.webp'
+import ChunkSize from './img/chunk.webp'
+import Ollama from './img/ollama.webp'
 
 const projects = [
   {
